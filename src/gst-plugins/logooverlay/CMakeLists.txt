@@ -6,8 +6,8 @@ set(LOGOOVERLAY_SOURCES
 add_library(logooverlay MODULE ${LOGOOVERLAY_SOURCES})
 
 target_link_libraries(logooverlay
-  ${gstreamer-1.5_LIBRARIES}
-  ${gstreamer-video-1.5_LIBRARIES}
+  ${gstreamer-1.0_LIBRARIES}
+  ${gstreamer-video-1.0_LIBRARIES}
   ${opencv_LIBRARIES}
   ${libsoup-2.4_LIBRARIES}
 )
@@ -15,7 +15,7 @@ target_link_libraries(logooverlay
 set_property(TARGET logooverlay
   PROPERTY INCLUDE_DIRECTORIES
     ${CMAKE_CURRENT_BINARY_DIR}/../../..
-    ${gstreamer-1.5_INCLUDE_DIRS}
+    ${gstreamer-1.0_INCLUDE_DIRS}
     ${opencv_INCLUDE_DIRS}
     ${libsoup-2.4_INCLUDE_DIRS}
 )

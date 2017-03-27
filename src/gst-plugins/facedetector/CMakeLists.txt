@@ -7,8 +7,8 @@ set(FACEDETECTOR_SOURCES
 add_library(facedetector MODULE ${FACEDETECTOR_SOURCES})
 
 target_link_libraries(facedetector
-  ${gstreamer-1.5_LIBRARIES}
-  ${gstreamer-video-1.5_LIBRARIES}
+  ${gstreamer-1.0_LIBRARIES}
+  ${gstreamer-video-1.0_LIBRARIES}
   ${opencv_LIBRARIES}
   ${SOUP_LIBRARIES}
 )
@@ -16,7 +16,7 @@ target_link_libraries(facedetector
 set_property(TARGET facedetector
   PROPERTY INCLUDE_DIRECTORIES
     ${CMAKE_CURRENT_BINARY_DIR}/../../..
-    ${gstreamer-1.5_INCLUDE_DIRS}
+    ${gstreamer-1.0_INCLUDE_DIRS}
     ${opencv_INCLUDE_DIRS}
 )
 
